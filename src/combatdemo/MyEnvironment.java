@@ -11,7 +11,6 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.Window;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import javax.swing.JDialog;
@@ -49,7 +48,6 @@ public class MyEnvironment extends Environment {
         } else if (e.getKeyCode() == KeyEvent.VK_3) {
             newCombatVisualizer("Combat Visualizer");
         }
-
     }
 
     @Override
@@ -62,15 +60,14 @@ public class MyEnvironment extends Environment {
 
     @Override
     public void paintEnvironment(Graphics graphics) {
-        System.out.println("painting");
         Font font = new Font("Calibri", Font.BOLD + Font.ITALIC, 20);
         graphics.setFont(font);
         graphics.setColor(Color.WHITE);
+        
         graphics.drawString("Press: ", 10, 20);
         graphics.drawString(" '1' for a Frame,", 10, 40);
         graphics.drawString(" '2' for a modal Dialog, or", 10, 60);
-        graphics.drawString(" '3' for a custom modal Combat Dialog!", 10, 80);
-        
+        graphics.drawString(" '3' for a custom modal Combat Dialog!", 10, 80); 
     }
 
     private void newWindow(String title) {
