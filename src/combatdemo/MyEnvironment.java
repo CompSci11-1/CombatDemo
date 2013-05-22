@@ -98,7 +98,7 @@ public class MyEnvironment extends Environment {
         dialog.setVisible(true);
     }
 
-    private void newCombatVisualizer(String title) {
+    public void newCombatVisualizer(String title) {
         JDialog dialog;
         dialog = new JDialog();
 
