@@ -25,7 +25,7 @@ public class CombatDemoMain {
 //        ApplicationStarter.run("Test Frame", new MyEnvironment(null));
         Image background = ResourceTools.loadImageFromResource("resources/charizard_background.jpg");
         MyEnvironment me = new MyEnvironment(background);
-        me.newCombatVisualizer("Combat Visualizer");
+//        me.newCombatVisualizer("Combat Visualizer");
         ApplicationStarter.run("Combat Demo", me);
 //        ApplicationStarter.run("Combat Demo", new MyEnvironment(background));
     }
