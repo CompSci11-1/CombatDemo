@@ -66,8 +66,8 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jlblFriendName" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jlblFriendImage" min="-2" pref="297" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jlblFriendImage" min="-2" pref="279" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="pnlBattle" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -115,7 +115,7 @@
                       <Component id="jScrollPane1" min="-2" pref="95" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jbtnAttack" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -179,8 +179,8 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jlblEnemyName" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jlblEnemyImage" min="-2" pref="298" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                  <Component id="jlblEnemyImage" min="-2" pref="278" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

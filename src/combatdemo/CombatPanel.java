@@ -5,6 +5,9 @@
 package combatdemo;
 
 import java.awt.Image;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
@@ -20,11 +23,17 @@ public class CombatPanel extends javax.swing.JPanel {
      */
     public CombatPanel() {
         initComponents();
+        initKeyHandler();
         initData();
         displayAttacks();
     }
     
     //<editor-fold defaultstate="collapsed" desc="Methods">
+    private void initKeyHandler(){
+        addKeyListener(new KeyActionListener());
+        setFocusable(true);
+    }
+    
     private void initData(){
         friendAttacks = new ArrayList<Attack>();
         friendAttacks.add(new Attack("Flame", 10, 30, .5));
@@ -116,7 +125,41 @@ public class CombatPanel extends javax.swing.JPanel {
     }
     //</editor-fold>
     
+    
+    
+    //<editor-fold defaultstate="collapsed" desc="KeyListener Interface">
+//    @Override
+//    public void keyTyped(KeyEvent e) {
+//
+//    }
+//    
+//    @Override
+//    public void keyPressed(KeyEvent e) {
+//        System.out.println("Key pressed: " + e.getKeyChar());
+//    }
+//    
+//    @Override
+//    public void keyReleased(KeyEvent e) {
+//    
+//    }
+    
+    private class KeyActionListener extends KeyAdapter {
 
+        @Override
+        public void keyPressed(KeyEvent e) {
+//            keyPressedHandler(e);
+            System.out.println("Key pressed: " + e.getKeyChar());
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+//            keyReleasedHandler(e);
+            System.out.println("Key released: " + e.getKeyChar());
+        }
+    }
+    
+    
+    //</editor-fold>
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -177,7 +220,7 @@ public class CombatPanel extends javax.swing.JPanel {
                 .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jbtnAttack)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         org.jdesktop.layout.GroupLayout pnlLeftLayout = new org.jdesktop.layout.GroupLayout(pnlLeft);
@@ -198,8 +241,8 @@ public class CombatPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .add(jlblFriendName)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jlblFriendImage, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 297, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(jlblFriendImage, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 279, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(pnlBattle, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -226,8 +269,8 @@ public class CombatPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .add(jlblEnemyName)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jlblEnemyImage, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 298, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(130, 130, 130))
+                .add(jlblEnemyImage, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 278, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(150, 150, 150))
         );
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(this);
