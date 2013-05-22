@@ -104,6 +104,7 @@ public class CombatPanel extends javax.swing.JPanel {
 
         pnlLeft.setBackground(new java.awt.Color(204, 255, 204));
 
+        jlblFriendName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jlblFriendName.setText("<friend>");
 
         jlblFriendImage.setText(" ");
